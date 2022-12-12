@@ -1,0 +1,20 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+#tweet-text {
+  width: 100%;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit-tweet {
+  font-family: 'Bungee', sans-serif;
+  color: #FFFFFF;
+  background-color: #4056A1;
+}
