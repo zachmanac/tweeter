@@ -4,6 +4,12 @@
   width: 90%;
 }
 
+textarea {
+  background-color: #f4f1ec;
+  border: none;
+  padding: 10px
+}
+
 #tweet-text {
   width: 100%;
 }
@@ -11,10 +17,14 @@
 .submit-button {
   display: flex;
   justify-content: space-between;
+  font-family: 'Bungee', sans-serif;
+  border-top-style: black;
+  border-top: solid;
+  padding-top: 5px;
 }
 
 .submit-tweet {
-  font-family: 'Bungee', sans-serif;
   color: #FFFFFF;
   background-color: #4056A1;
 }
+

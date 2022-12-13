@@ -34,4 +34,43 @@ body {
 
 .tweet-container {
   width: 90%;
+  border-style: solid;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.tweet-container:hover {
+  box-shadow: 5px 10px #545149;
+}
+
+.tweet-container header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-container div {
+  display: flex;
+}
+
+.tweet-container h4 {
+opacity: 0.5;
+}
+
+.tweet-container img {
+  max-height: 50px;
+}
+
+.tweet-container footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid;
+  font-size: 18px;
+}
+
+footer div {
+  color: #4056A1;
+}
+
+footer div i:hover {
+  color: yellow;
 }
