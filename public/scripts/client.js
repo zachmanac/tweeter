@@ -5,29 +5,6 @@
  */
 
 $(document).ready(function() {
-  const tweets = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-        },
-      "content": {
-          "text": "If I have seen further it is by standing on the shoulders of giants"
-        },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
 
   const renderTweets = function(tweets) {
     $('.tweet-section').empty();
@@ -35,7 +12,6 @@ $(document).ready(function() {
     for(const tweet of tweets) {
       // calls createTweetElement for each tweet
       const $tweet = $createTweetElement(tweet);
-
       // takes return value and appends it to the tweets container
       $('.tweet-section').prepend($tweet);
     }
@@ -54,7 +30,7 @@ $(document).ready(function() {
       <p>${tweetData.content.text}
       </p>
       <footer>
-        <p>${tweetData.created_at}</p>
+        <p>${timeago.format(tweetData.created_at)}</p>
         <div>
           <p>
             <i class="fa-solid fa-flag"></i>
@@ -68,9 +44,7 @@ $(document).ready(function() {
     return tweet;
   };
 
-  renderTweets(tweets);
-
-  $("form").on('submit', (event) => {
+  $("form").on("submit", (event) => {
     event.preventDefault();
     const data = $("form").serialize();
     console.log(data);
@@ -79,7 +53,13 @@ $(document).ready(function() {
       console.log(response);
     })
 
-  })
+  });
+  
+  const loadTweets = () => {$.get("/tweets", (tweets) => {
+      (renderTweets(tweets));
+    });
+  };
 
+  loadTweets();
 });
 
