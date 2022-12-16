@@ -18,6 +18,13 @@ $(document).ready(function() {
   };
 
   const $createTweetElement = function(tweetData) {
+
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
     const tweet = `
       <article class="tweet-container">
       <header>
@@ -27,7 +34,7 @@ $(document).ready(function() {
         </div>
         <h4>${tweetData.user.handle}</h4>
       </header>
-      <p>${tweetData.content.text}
+      <p>${escape(tweetData.content.text)}
       </p>
       <footer>
         <p>${timeago.format(tweetData.created_at)}</p>
@@ -41,11 +48,6 @@ $(document).ready(function() {
       </footer>
       </article>
       `;
-    
-    if (tweetData.content.text.length > 140) {
-      return alert("Tweet too long.");
-    }
-
     return tweet;
   };
 
@@ -64,15 +66,15 @@ $(document).ready(function() {
       return alert("Tweet length too long!");
     }
     
-    if($("textarea").val().length == 0) {
+    if($("textarea").val().length === 0) {
       return alert("Must input text to tweet!");
     }
 
     const data = $("form").serialize();
-    // console.log("data string", $("textarea").val());
 
     //clears text input field after submission
-    $("textarea").val();
+    $("textarea").val("");
+    $("output").val(140);
 
     $.post("/tweets", data, (response) => {
       console.log(response);
