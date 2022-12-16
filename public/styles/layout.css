@@ -56,8 +56,12 @@ width: 90%;
   display: flex;
 }
 
+.tweet-container p {
+  display: flex;
+}
+
 .tweet-container h4 {
-opacity: 0.5;
+  opacity: 0.5;
 }
 
 .tweet-container img {
