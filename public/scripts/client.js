@@ -63,12 +63,14 @@ $(document).ready(function() {
     event.preventDefault();
     
     if($("textarea").val().length > 140) {
-      return alert("Tweet length too long!");
+      return $("#error-new-tweet").slideDown("slow");
     }
     
     if($("textarea").val().length === 0) {
-      return alert("Must input text to tweet!");
+      return $("#error-new-tweet").slideDown("slow");
     }
+
+    $("#error-new-tweet").slideUp("slow");
 
     const data = $("form").serialize();
 
@@ -82,4 +84,3 @@ $(document).ready(function() {
     });
   });
 });
-

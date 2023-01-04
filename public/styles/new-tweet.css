@@ -28,3 +28,11 @@ textarea {
   background-color: #4056A1;
 }
 
+#error-new-tweet {
+  display: none;
+  justify-content: center;
+  color: #D8000C;
+  border: #D8000C;
+  border-style: solid;
+  text-align: center;
+}
