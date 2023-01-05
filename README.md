@@ -20,6 +20,6 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Screenshots
 
-!["Screenshot of desktop view](https://github.com/zachmanac/tweeter/blob/master/docs/tweeter-desktop-view.jpg)
-!["Screenshot of mobile view](https://github.com/zachmanac/tweeter/blob/master/docs/tweeter-mobile-view.jpg)
-!["Screenshot of error while attempting to create tweet that is too long](https://github.com/zachmanac/tweeter/blob/master/docs/tweeter-error.jpg)
+![Screenshot of desktop view](https://github.com/zachmanac/tweeter/blob/master/docs/tweeter-desktop-view.jpg)
+![Screenshot of mobile view](https://github.com/zachmanac/tweeter/blob/master/docs/tweeter-mobile-view.jpg)
+![Screenshot of error while attempting to create tweet that is too long](https://github.com/zachmanac/tweeter/blob/master/docs/tweeter-error.jpg)
