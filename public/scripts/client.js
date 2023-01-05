@@ -19,7 +19,7 @@ $(document).ready(function() {
 
   const $createTweetElement = function(tweetData) {
 
-    const escape = function (str) {
+    const escape = function(str) {
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
       return div.innerHTML;
@@ -62,11 +62,11 @@ $(document).ready(function() {
   $("form").on("submit", (event) => {
     event.preventDefault();
     
-    if($("textarea").val().length > 140) {
+    if ($("textarea").val().length > 140) {
       return $("#error-new-tweet").slideDown("slow");
     }
     
-    if($("textarea").val().length === 0) {
+    if ($("textarea").val().length === 0) {
       return $("#error-new-tweet").slideDown("slow");
     }
 
